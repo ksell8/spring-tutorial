@@ -1,0 +1,33 @@
+scalar DateTime
+
+type Query {
+    bookById(id: ID): Book
+    bookByName(id: ID): Book
+}
+
+type Mutation{
+    addBook(bookInput: BookInput): Book
+}
+
+type Book {
+    id: ID
+    name: String!
+    author: String!
+    status: Status!
+    publisher: String
+    publishedDate: DateTime
+}
+
+input BookInput{
+    name: String!
+    author: String!
+    status: Status!
+    publisher: String
+    publishedDate: DateTime
+}
+
+enum Status {
+  READ
+  READING
+  TO_READ
+}
