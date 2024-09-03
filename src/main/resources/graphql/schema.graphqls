@@ -1,4 +1,4 @@
-scalar DateTime
+scalar Date
 
 type Query {
     bookById(id: ID): Book
@@ -15,7 +15,7 @@ type Book {
     author: String!
     status: Status!
     publisher: String
-    publishedDate: DateTime
+    publishedDate: Date
 }
 
 input BookInput{
@@ -23,11 +23,21 @@ input BookInput{
     author: String!
     status: Status!
     publisher: String
-    publishedDate: DateTime
+    publishedDate: Date
 }
 
 enum Status {
   READ
   READING
   TO_READ
+}
+
+enum Genre{
+    POETRY
+    PHILOSOPHY
+    MEMOIR
+    NONFICTION
+    SCI_FI
+    HORROR
+    FICTION
 }

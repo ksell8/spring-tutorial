@@ -17,6 +17,7 @@ public class Book {
   private Status status;
   private String publisher;
   private LocalDate publishedDate;
+  private Genre genre;
 
   // Constructors, Getters, and Setters
 
@@ -47,5 +48,8 @@ public class Book {
 
   public LocalDate getPublishedDate() { return publishedDate; }
   public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
+
+  public Genre getGenre() { return genre; }
+  public void setGenre(Genre genre) { this.genre = genre; }
 }
 

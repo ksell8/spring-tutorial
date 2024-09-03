@@ -8,6 +8,7 @@ public class BookInput {
   private Status status = Status.TO_READ;
   private String publisher;
   private LocalDate publishedDate;
+  private Genre genre;
 
   // Getters and Setters
   public String getName() { return name; }
@@ -24,4 +25,8 @@ public class BookInput {
 
   public LocalDate getPublishedDate() { return publishedDate; }
   public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
+
+  public Genre getGenre() { return genre; }
+  public void setGenre(Genre genre) { this.genre = genre; }
+
 }

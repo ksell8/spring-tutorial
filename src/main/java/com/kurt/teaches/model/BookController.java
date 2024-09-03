@@ -11,9 +11,12 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class BookController {
 
-  @Autowired
-  private BookRepository bookRepository;
+  private final BookRepository bookRepository;
 
+  @Autowired
+  public BookController(BookRepository bookRepository) {
+    this.bookRepository = bookRepository;
+  }
   // Query to get a book by its ID
   @QueryMapping
   public Book bookById(@Argument String id) {
@@ -35,6 +38,7 @@ public class BookController {
     book.setStatus(bookInput.getStatus());
     book.setPublisher(bookInput.getPublisher());
     book.setPublishedDate(bookInput.getPublishedDate());
+    book.setGenre(bookInput.getGenre());
     return bookRepository.save(book);
   }
 }
