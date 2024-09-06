@@ -1,5 +1,5 @@
 package com.kurt.teaches.model;
-import java.time.LocalDate;
+import java.time.Year;
 
 public class BookInput {
 
@@ -7,7 +7,7 @@ public class BookInput {
   private String author;
   private Status status = Status.TO_READ;
   private String publisher;
-  private LocalDate publishedDate;
+  private Year publishedDate;
   private Genre genre;
 
   // Getters and Setters
@@ -23,8 +23,8 @@ public class BookInput {
   public String getPublisher() { return publisher; }
   public void setPublisher(String publisher) { this.publisher = publisher; }
 
-  public LocalDate getPublishedDate() { return publishedDate; }
-  public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
+  public Year getPublishedDate() { return publishedDate; }
+  public void setPublishedDate(Year publishedDate) { this.publishedDate = publishedDate; }
 
   public Genre getGenre() { return genre; }
   public void setGenre(Genre genre) { this.genre = genre; }

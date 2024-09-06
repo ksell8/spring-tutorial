@@ -1,11 +1,8 @@
 package com.kurt.teaches.model;
 
-import com.kurt.teaches.model.Status;
-
+import java.time.Year;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDate;
 
 @Document(collection = "books")
 public class Book {
@@ -16,14 +13,14 @@ public class Book {
   private String author;
   private Status status;
   private String publisher;
-  private LocalDate publishedDate;
+  private Year publishedDate;
   private Genre genre;
 
   // Constructors, Getters, and Setters
 
   public Book() {}
 
-  public Book(String name, String author, Status status, String publisher, LocalDate publishedDate) {
+  public Book(String name, String author, Status status, String publisher, Year publishedDate) {
     this.name = name;
     this.author = author;
     this.status = status;
@@ -46,8 +43,8 @@ public class Book {
   public String getPublisher() { return publisher; }
   public void setPublisher(String publisher) { this.publisher = publisher; }
 
-  public LocalDate getPublishedDate() { return publishedDate; }
-  public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
+  public Year getPublishedDate() { return publishedDate; }
+  public void setPublishedDate(Year publishedDate) { this.publishedDate = publishedDate; }
 
   public Genre getGenre() { return genre; }
   public void setGenre(Genre genre) { this.genre = genre; }

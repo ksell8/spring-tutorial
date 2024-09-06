@@ -1,4 +1,4 @@
-scalar Date
+scalar Year
 
 type Query {
     bookById(id: ID): Book
@@ -15,7 +15,7 @@ type Book {
     author: String!
     status: Status!
     publisher: String
-    publishedDate: Date
+    publishedDate: Year
 }
 
 input BookInput{
@@ -23,7 +23,7 @@ input BookInput{
     author: String!
     status: Status!
     publisher: String
-    publishedDate: Date
+    publishedDate: Year
 }
 
 enum Status {
