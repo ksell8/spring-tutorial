@@ -2,7 +2,7 @@ scalar Year
 
 type Query {
     bookById(id: ID): Book
-    bookByName(id: ID): Book
+    bookByName(name: String!): Book
 }
 
 type Mutation{
