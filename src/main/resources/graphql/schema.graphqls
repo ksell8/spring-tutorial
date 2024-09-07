@@ -16,6 +16,7 @@ type Book {
     status: Status!
     publisher: String
     publishedDate: Year
+    genre: Genre
 }
 
 input BookInput{
@@ -24,6 +25,7 @@ input BookInput{
     status: Status!
     publisher: String
     publishedDate: Year
+    genre: Genre
 }
 
 enum Status {
