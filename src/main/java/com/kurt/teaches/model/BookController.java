@@ -5,6 +5,8 @@ import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
+import com.kurt.teaches.model.types.Book;
+import com.kurt.teaches.model.types.BookInput;
 
 @Controller
 public class BookController {
@@ -36,5 +38,11 @@ public class BookController {
     book.setPublishedDate(bookInput.getPublishedDate());
     book.setGenre(bookInput.getGenre());
     return bookService.addBook(book);
+  }
+
+  @MutationMapping
+  public Boolean deleteById(@Argument String id){
+    bookService.deleteById(id);
+    return true;
   }
 }
