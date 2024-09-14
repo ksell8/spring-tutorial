@@ -1,4 +1,4 @@
-package com.kurt.teaches.model.types;
+package com.kurt.teaches.library.model.types;
 
 import java.lang.Object;
 import java.lang.Override;

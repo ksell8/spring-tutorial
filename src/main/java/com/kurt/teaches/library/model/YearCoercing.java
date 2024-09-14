@@ -1,4 +1,4 @@
-package com.kurt.teaches.model;
+package com.kurt.teaches.library.model;
 import org.jetbrains.annotations.NotNull;
 
 import graphql.language.Value;

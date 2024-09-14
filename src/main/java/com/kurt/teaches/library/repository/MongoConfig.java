@@ -1,4 +1,4 @@
-package com.kurt.teaches.repository;
+package com.kurt.teaches.library.repository;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

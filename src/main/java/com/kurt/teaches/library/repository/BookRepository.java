@@ -1,6 +1,6 @@
-package com.kurt.teaches.repository;
+package com.kurt.teaches.library.repository;
 
-import com.kurt.teaches.model.types.Book;
+import com.kurt.teaches.library.model.types.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;

@@ -1,10 +1,10 @@
-package com.kurt.teaches.model;
+package com.kurt.teaches.library.model;
 
-import com.kurt.teaches.repository.BookRepository;
+import com.kurt.teaches.library.repository.BookRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import com.kurt.teaches.model.types.Book;
+import com.kurt.teaches.library.model.types.Book;
 
 @Service
 public class BookService {

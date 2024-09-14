@@ -1,4 +1,4 @@
-package com.kurt.teaches.model;
+package com.kurt.teaches.library.model;
 
 import graphql.schema.GraphQLScalarType;
 import org.springframework.context.annotation.Bean;

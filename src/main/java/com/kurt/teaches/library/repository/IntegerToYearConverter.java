@@ -1,4 +1,4 @@
-package com.kurt.teaches.repository;
+package com.kurt.teaches.library.repository;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

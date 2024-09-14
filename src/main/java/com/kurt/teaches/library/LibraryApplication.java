@@ -1,4 +1,4 @@
-package com.kurt.teaches;
+package com.kurt.teaches.library;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

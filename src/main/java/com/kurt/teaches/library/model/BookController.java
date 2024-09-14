@@ -1,13 +1,13 @@
-package com.kurt.teaches.model;
+package com.kurt.teaches.library.model;
 
+import com.kurt.teaches.library.model.types.Book;
+import com.kurt.teaches.library.model.types.BookInput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
-import com.kurt.teaches.model.types.Book;
-import com.kurt.teaches.model.types.BookInput;
 
 @Controller
 public class BookController {
