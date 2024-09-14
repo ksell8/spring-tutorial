@@ -1,6 +1,7 @@
 package com.kurt.teaches.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -28,6 +29,11 @@ public class BookController {
     return bookService.getBookByName(name);
   }
 
+  @QueryMapping
+  public Page<Book> books(@Argument int pageNumber, @Argument int pageSize){
+    return bookService.books(pageNumber, pageSize);
+  }
+
   @MutationMapping
   public Book addBook(@Argument BookInput bookInput) {
     Book book = new Book();
@@ -35,7 +41,7 @@ public class BookController {
     book.setAuthor(bookInput.getAuthor());
     book.setStatus(bookInput.getStatus());
     book.setPublisher(bookInput.getPublisher());
-    book.setPublishedDate(bookInput.getPublishedDate());
+    book.setpublishedYear(bookInput.getpublishedYear());
     book.setGenre(bookInput.getGenre());
     return bookService.addBook(book);
   }

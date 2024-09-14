@@ -15,20 +15,20 @@ public class BookInput {
 
   private String publisher;
 
-  private Year publishedDate;
+  private Year publishedYear;
 
   private Genre genre;
 
   public BookInput() {
   }
 
-  public BookInput(String name, String author, Status status, String publisher, Year publishedDate,
+  public BookInput(String name, String author, Status status, String publisher, Year publishedYear,
       Genre genre) {
     this.name = name;
     this.author = author;
     this.status = status;
     this.publisher = publisher;
-    this.publishedDate = publishedDate;
+    this.publishedYear = publishedYear;
     this.genre = genre;
   }
 
@@ -64,12 +64,12 @@ public class BookInput {
     this.publisher = publisher;
   }
 
-  public Year getPublishedDate() {
-    return publishedDate;
+  public Year getpublishedYear() {
+    return publishedYear;
   }
 
-  public void setPublishedDate(Year publishedDate) {
-    this.publishedDate = publishedDate;
+  public void setpublishedYear(Year publishedYear) {
+    this.publishedYear = publishedYear;
   }
 
   public Genre getGenre() {
@@ -82,7 +82,7 @@ public class BookInput {
 
   @Override
   public String toString() {
-    return "BookInput{name='" + name + "', author='" + author + "', status='" + status + "', publisher='" + publisher + "', publishedDate='" + publishedDate + "', genre='" + genre + "'}";
+    return "BookInput{name='" + name + "', author='" + author + "', status='" + status + "', publisher='" + publisher + "', publishedYear='" + publishedYear + "', genre='" + genre + "'}";
   }
 
   @Override
@@ -94,13 +94,13 @@ public class BookInput {
         Objects.equals(author, that.author) &&
         Objects.equals(status, that.status) &&
         Objects.equals(publisher, that.publisher) &&
-        Objects.equals(publishedDate, that.publishedDate) &&
+        Objects.equals(publishedYear, that.publishedYear) &&
         Objects.equals(genre, that.genre);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, author, status, publisher, publishedDate, genre);
+    return Objects.hash(name, author, status, publisher, publishedYear, genre);
   }
 
   public static Builder newBuilder() {
@@ -116,7 +116,7 @@ public class BookInput {
 
     private String publisher;
 
-    private Year publishedDate;
+    private Year publishedYear;
 
     private Genre genre;
 
@@ -126,7 +126,7 @@ public class BookInput {
       result.author = this.author;
       result.status = this.status;
       result.publisher = this.publisher;
-      result.publishedDate = this.publishedDate;
+      result.publishedYear = this.publishedYear;
       result.genre = this.genre;
       return result;
     }
@@ -151,8 +151,8 @@ public class BookInput {
       return this;
     }
 
-    public Builder publishedDate(Year publishedDate) {
-      this.publishedDate = publishedDate;
+    public Builder publishedYear(Year publishedYear) {
+      this.publishedYear = publishedYear;
       return this;
     }
 

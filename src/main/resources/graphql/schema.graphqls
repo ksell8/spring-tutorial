@@ -3,6 +3,7 @@ scalar Year
 type Query {
     bookById(id: ID): Book
     bookByName(name: String!): Book
+    books(pageNumber: Int, pageSize: Int): [Book]
 }
 
 type Mutation{
@@ -16,7 +17,7 @@ type Book {
     author: String!
     status: Status!
     publisher: String
-    publishedDate: Year
+    publishedYear: Year
     genre: Genre
 }
 
@@ -25,7 +26,7 @@ input BookInput{
     author: String!
     status: Status!
     publisher: String
-    publishedDate: Year
+    publishedYear: Year
     genre: Genre
 }
 

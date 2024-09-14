@@ -1,7 +1,8 @@
 package com.kurt.teaches.model;
 
 import com.kurt.teaches.repository.BookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.kurt.teaches.model.types.Book;
 
@@ -10,7 +11,6 @@ public class BookService {
 
   private final BookRepository bookRepository;
 
-  @Autowired
   public BookService(BookRepository bookRepository) {
     this.bookRepository = bookRepository;
   }
@@ -21,6 +21,10 @@ public class BookService {
 
   public Book getBookByName(String name) {
     return bookRepository.findByName(name);
+  }
+
+  public Page<Book> books(int pageNumber, int pageSize){
+    return bookRepository.findAllBy(PageRequest.of(pageNumber, pageSize));
   }
 
   public Book addBook(Book book) {
