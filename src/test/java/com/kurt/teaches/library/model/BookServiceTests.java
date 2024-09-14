@@ -1,8 +1,7 @@
-package com.kurt.teaches.library;
+package com.kurt.teaches.library.model;
 
 import com.kurt.teaches.library.model.types.Book;
 import com.kurt.teaches.library.repository.BookRepository;
-import com.kurt.teaches.library.model.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
