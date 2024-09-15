@@ -7,6 +7,7 @@
 
 plugins {
     id("com.netflix.dgs.codegen") version "6.3.0"
+    id("ru.vyarus.mkdocs") version "4.0.1"
 }
 
 repositories {

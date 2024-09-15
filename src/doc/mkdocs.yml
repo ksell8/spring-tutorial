@@ -1,0 +1,83 @@
+site_name: Spring Tutorial
+
+# Meta tags (placed in header)
+site_description: Learn Java Spring
+site_author: Kurt Sell
+site_url: https://github.com/ksell8/spring-tutorial
+
+# Repository (add link to repository on each page)
+repo_name: spring-tutorial
+repo_url: https://github.com/ksell8/spring-tutorial
+edit_uri: edit/main/src/doc/docs/
+
+#Copyright (shown at the footer)
+copyright: 'Copyright &copy; 2024 Kurt Sell'
+
+# Meterial theme
+theme:
+  name: 'material'
+  palette:
+    primary: 'green'
+    accent: 'light-green'
+    scheme: slate
+  features:
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.instant
+    - navigation.tracking
+    - navigation.top
+
+plugins:
+  - search
+#    Required for variables support (https://github.com/rosscdh/mkdocs-markdownextradata-plugin)
+#  - markdownextradata
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ksell8
+
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Tutorial:
+    - Installation: tutorial/installation.md
+  - Learn:
+      - Spring:
+          - Annotations: learn/annotations.md
+  - About:
+      - Release notes: about/history.md
