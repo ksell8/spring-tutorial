@@ -10,7 +10,7 @@ to build industry standard applications, but why things work the way they do.
 
 The tutorial that will teach how to build a Java GraphQL API
 connected to a MongoDB database.  We will learn about systems
-such as the Spring Framework, Tomcat, Docker, Maven, Gradle, Git, Java and JUnit.
+such as the Spring Framework, Tomcat, Docker, Maven, Git, Java and JUnit.
 Which will teach us about operating systems, computing languages, security,
 systems of control, and the internet.
 

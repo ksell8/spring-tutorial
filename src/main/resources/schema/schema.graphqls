@@ -47,12 +47,12 @@ enum Genre{
 }
 
 type PageBook {
-    content: [Book]          # The list of books
-    totalPages: Int          # Total number of pages
-    totalElements: Int       # Total number of books
-    size: Int                # Page size
-    number: Int              # Current page number
-    numberOfElements: Int    # Number of elements on the current page
-    hasNext: Boolean         # Whether there's a next page
-    hasPrevious: Boolean     # Whether there's a previous page
+    content: [Book]
+    totalPages: Int
+    totalElements: Int
+    size: Int
+    number: Int
+    numberOfElements: Int
+    hasNext: Boolean
+    hasPrevious: Boolean
 }

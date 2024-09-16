@@ -26,6 +26,7 @@ theme:
     #- navigation.instant
     - navigation.tracking
     - navigation.top
+    - navigation.footer
 
 plugins:
   - search
@@ -75,9 +76,45 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Tutorial:
-    - Installation: tutorial/installation.md
+    - Install Tools: tutorial/installation.md
+    - Generate Base Project: tutorial/base.md
+    - Generate GraphQL Schema: tutorial/schema.md
+    - Add Repository & Data Fetchers and Mutators: tutorial/data.md
+    - Write Tests: tutorial/tests.md
+    - Add Docker Infrastructure: tutorial/docker.md
   - Learn:
-      - Spring:
-          - Annotations: learn/annotations.md
+      - Computer Science Basics:
+        - Computing Languages: learn/general/languages.md
+        - Translation: learn/general/translation.md
+        - Static/Dynamic Analysis: learn/general/analysis.md
+        - Operating Systems: learn/general/os.md
+        - APIs: learn/general/apis.md
+        - Web Protocols & Routing: learn/general/networking.md
+        - Licensing: learn/general/licensing.md
+      - Java:
+        - History of Java: learn/java/history.md
+        - JiT Compilation & the JVM: learn/java/jit.md
+        - Garbage Collection: learn/java/garbage.md
+        - Spring:
+          - Inversion of Control and Dependency Injection: learn/java/spring/containers.md
+          - Spring Boot Annotations: learn/java/spring/annotations.md
+          - Spring Beans & Other Annotations: learn/java/spring/spring-beans.md
+        - Maven:
+          - Java Build Systems: learn/java/maven/build.md
+          - Basic Maven Configuration: learn/java/maven/basic.md
+          - Packaging: learn/java/maven/packaging.md
+          - Plugins: learn/java/maven/plugins.md
+      - Docker:
+        - Virtualization & Containers: learn/docker/containers.md
+        - Docker Concepts & Related Commands: learn/docker/docker.md
+        - Docker Compose & Container Orchestration: learn/docker/docker-compose.md
+      - MongoDB:
+        - Relational vs Non-Relational Databases: learn/mongodb/sql.md
+        - BSON: learn/mongodb/bson.md
+        - MongoDB-Spring: learn/mongodb/spring.md
+      - GraphQL:
+        - Schemas: learn/graphql/schema.md
+        - Queries & Mutations: learn/graphql/query-mutation.md
+        - GraphQL-Spring: learn/graphql/spring.md
   - About:
       - Release notes: about/history.md
