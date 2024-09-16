@@ -79,6 +79,7 @@ nav:
     - Install Tools: tutorial/installation.md
     - Generate Base Project: tutorial/base.md
     - Generate GraphQL Schema: tutorial/schema.md
+    - Create Scalar Support: tutorial/scalar.md
     - Add Repository & Data Fetchers and Mutators: tutorial/data.md
     - Write Tests: tutorial/tests.md
     - Add Docker Infrastructure: tutorial/docker.md
