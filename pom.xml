@@ -44,6 +44,7 @@
 		<java.version>22</java.version>
 		<maven.compiler.source>22</maven.compiler.source>
 		<maven.compiler.target>22</maven.compiler.target>
+		<netflix-dgs.version>9.1.0</netflix-dgs.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,9 +71,8 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-docker-compose</artifactId>
-			<optional>true</optional>
+			<groupId>com.netflix.graphql.dgs</groupId>
+			<artifactId>graphql-dgs-spring-graphql-starter</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.graphql</groupId>
@@ -90,9 +90,65 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.netflix.graphql.dgs</groupId>
+				<artifactId>graphql-dgs-platform-dependencies</artifactId>
+				<version>${netflix-dgs.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>io.github.deweyjose</groupId>
+				<artifactId>graphqlcodegen-maven-plugin</artifactId>
+				<version>1.61.5</version>
+				<executions>
+					<execution>
+						<id>dgs-codegen</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaPaths>
+								<param>src/main/resources/schema</param>
+							</schemaPaths>
+							<packageName>com.kurt.teaches.library.schema</packageName>
+							<addGeneratedAnnotation>true</addGeneratedAnnotation>
+							<typeMapping>
+								<Year>
+									java.time.Year
+								</Year>
+							</typeMapping>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>add-dgs-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

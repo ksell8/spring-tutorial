@@ -6,26 +6,9 @@
  */
 
 plugins {
-    id("com.netflix.dgs.codegen") version "6.3.0"
     id("ru.vyarus.mkdocs") version "4.0.1"
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
-    gradlePluginPortal()
 }
-
-dependencies {
-    implementation("com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:6.3.0")
-}
-
-tasks.withType<com.netflix.graphql.dgs.codegen.gradle.GenerateJavaTask>  {
-    schemaPaths = mutableListOf<Any>("$projectDir/src/main/resources/graphql/schema.graphqls")
-    packageName = "com.kurt.teaches.schema"
-    generateDataTypes = true
-    maxProjectionDepth = 2
-    generatedSourcesDir = "$projectDir/target"
-    typeMapping = mutableMapOf("Year" to "java.time.Year")
-}
-

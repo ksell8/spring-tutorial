@@ -4,7 +4,7 @@ import com.kurt.teaches.library.repository.BookRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import com.kurt.teaches.library.model.types.Book;
+import com.kurt.teaches.library.schema.types.Book;
 
 @Service
 public class BookService {

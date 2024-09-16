@@ -3,7 +3,7 @@ scalar Year
 type Query {
     bookById(id: ID): Book
     bookByName(name: String!): Book
-    books(pageNumber: Int, pageSize: Int): [Book]
+    books(pageNumber: Int, pageSize: Int): PageBook
 }
 
 type Mutation{
@@ -44,4 +44,15 @@ enum Genre{
     SCI_FI
     HORROR
     FICTION
+}
+
+type PageBook {
+    content: [Book]          # The list of books
+    totalPages: Int          # Total number of pages
+    totalElements: Int       # Total number of books
+    size: Int                # Page size
+    number: Int              # Current page number
+    numberOfElements: Int    # Number of elements on the current page
+    hasNext: Boolean         # Whether there's a next page
+    hasPrevious: Boolean     # Whether there's a previous page
 }
