@@ -44,6 +44,7 @@ public class BookController {
     pageBook.setNumber(pages.getNumber());
     pageBook.setSize(pages.getSize());
     pageBook.setNumberOfElements(pages.getNumberOfElements());
+    pageBook.setTotalElements((int) pages.getTotalElements());
     return pageBook;
   }
 
@@ -56,6 +57,9 @@ public class BookController {
     book.setPublisher(bookInput.getPublisher());
     book.setPublishedYear(bookInput.getPublishedYear());
     book.setGenre(bookInput.getGenre());
+    book.setHardcover(bookInput.getHardcover());
+    book.setPages(bookInput.getPages());
+    book.setIsbn(bookInput.getIsbn());
     return bookService.addBook(book);
   }
 

@@ -1,4 +1,4 @@
-package com.kurt.teaches.library.model;
+package com.kurt.teaches.library.scalar;
 import org.jetbrains.annotations.NotNull;
 
 import graphql.language.Value;

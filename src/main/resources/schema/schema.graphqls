@@ -1,4 +1,5 @@
 scalar Year
+scalar ISBN
 
 type Query {
     bookById(id: ID): Book
@@ -19,6 +20,9 @@ type Book {
     publisher: String
     publishedYear: Year
     genre: Genre
+    hardcover: Boolean
+    pages: Int
+    isbn: ISBN
 }
 
 input BookInput{
@@ -28,12 +32,17 @@ input BookInput{
     publisher: String
     publishedYear: Year
     genre: Genre
+    hardcover: Boolean
+    pages: Int
+    isbn: ISBN
 }
 
 enum Status {
   READ
   READING
   TO_READ
+  NOT_INTERESTED
+  REFERENCE
 }
 
 enum Genre{
