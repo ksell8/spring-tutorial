@@ -93,7 +93,7 @@ schema changes.
 REST stands for Representational State Transfer.  The state we are transferring is the CRUD operation we want to perform
 on the data the application we are querying stores.
 
-!!! info Terminology
+!!! info "Terminology"
     **State** is a snapshot of data.  To change state is to change the data.
 
     REST itself is **stateless**.  It transfers a requested state change, but it only knows about the state it is asking about.
