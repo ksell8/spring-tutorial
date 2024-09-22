@@ -110,7 +110,7 @@ the GraphQL endpoint defines the specific type of state change it wants to perfo
 These types of state changes are called queries and mutations and we will go over them in-depth later where we will
 also learn about the GraphQL schema language.
 
-!!! info Terminology
+!!! info "Terminology"
     Why is GraphQL called GraphQL?  GraphQL stands for Graph Query Language. In this context, "graph" refers to how 
     data is connected. Imagine a graph as a web or a network of related information. For example, think of a social network 
     like Instagram: a user is connected to their posts, their followers, and the comments on those posts. 
