@@ -64,8 +64,8 @@ public class BookController {
   }
 
   @DgsMutation(field = DgsConstants.MUTATION.DeleteById)
-  public Boolean deleteById(@InputArgument(DgsConstants.MUTATION.DELETEBYID_INPUT_ARGUMENT.Id) String id) {
+  public String deleteById(@InputArgument(DgsConstants.MUTATION.DELETEBYID_INPUT_ARGUMENT.Id) String id) {
     bookService.deleteById(id);
-    return true;
+    return id;
   }
 }

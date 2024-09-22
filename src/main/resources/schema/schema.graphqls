@@ -9,7 +9,7 @@ type Query {
 
 type Mutation{
     addBook(bookInput: BookInput): Book
-    deleteById(id: ID): Boolean
+    deleteById(id: ID): String
 }
 
 type Book {

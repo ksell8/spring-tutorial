@@ -89,10 +89,9 @@ nav:
         - Translation: learn/general/translation.md
         - Static/Dynamic Analysis: learn/general/analysis.md
         - Operating Systems: learn/general/os.md
-        - APIs: learn/general/apis.md
+        - Applications: learn/general/applications.md
         - Web Protocols & Routing: learn/general/networking.md
         - Licensing: learn/general/licensing.md
-        - How was This Site Built: learn/general/site.md
       - Java:
         - History of Java: learn/java/history.md
         - JiT Compilation & the JVM: learn/java/jit.md
@@ -110,6 +109,7 @@ nav:
         - Virtualization & Containers: learn/docker/containers.md
         - Docker Concepts & Related Commands: learn/docker/docker.md
         - Docker Compose & Container Orchestration: learn/docker/docker-compose.md
+        - Docker Volumes: learn/docker/volumes.md
       - MongoDB:
         - Relational vs Non-Relational Databases: learn/mongodb/sql.md
         - BSON: learn/mongodb/bson.md
@@ -120,3 +120,4 @@ nav:
         - GraphQL-Spring: learn/graphql/spring.md
   - About:
       - Release notes: about/history.md
+      - Site Info: about/site.md
