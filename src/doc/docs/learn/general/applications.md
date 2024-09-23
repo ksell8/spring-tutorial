@@ -50,7 +50,7 @@ calls to each of its component services in order to serve the application to the
 
 There are lots of different ways to give a software application to a user.  Here are just a few examples.
 
-1. Load the software onto a video game console and send the console to a consumer.
+1. Load the software onto a device (like a video game console or robot vacuum) and send the device to a consumer.
 2. Provide the application in a mobile app store. 
 3. Provide the application to install as a binary on a desktop.
 4. Provide the application as a web application.

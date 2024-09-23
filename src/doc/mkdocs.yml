@@ -90,7 +90,7 @@ nav:
         - Static/Dynamic Analysis: learn/general/analysis.md
         - Operating Systems: learn/general/os.md
         - Applications: learn/general/applications.md
-        - Web Protocols & Routing: learn/general/networking.md
+        - Networking Protocols & Routing: learn/general/networking.md
         - Licensing: learn/general/licensing.md
       - Java:
         - History of Java: learn/java/history.md
