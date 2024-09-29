@@ -1,4 +1,4 @@
-site_name: Spring Into Java
+site_name: Spring Into Computer Science
 
 # Meta tags (placed in header)
 site_description: Learn Java Spring
@@ -75,22 +75,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Tutorial:
-    - Install Tools: tutorial/installation.md
-    - Generate Base Project: tutorial/base.md
-    - Generate GraphQL Schema: tutorial/schema.md
-    - Create Scalar Support: tutorial/scalar.md
-    - Add Repository & Data Fetchers and Mutators: tutorial/data.md
-    - Write Tests: tutorial/tests.md
-    - Add Docker Infrastructure: tutorial/docker.md
   - Learn:
       - Computer Science Basics:
         - Computing Languages: learn/general/languages.md
-        - Translation: learn/general/translation.md
-        - Static/Dynamic Analysis: learn/general/analysis.md
         - Operating Systems: learn/general/os.md
-        - Applications: learn/general/applications.md
         - Networking Protocols & Routing: learn/general/networking.md
+        - Applications: learn/general/applications.md
         - Licensing: learn/general/licensing.md
       - Java:
         - History of Java: learn/java/history.md
@@ -118,6 +108,14 @@ nav:
         - Schemas: learn/graphql/schema.md
         - Queries & Mutations: learn/graphql/query-mutation.md
         - GraphQL-Spring: learn/graphql/spring.md
+  - Tutorial:
+      - Install Tools: tutorial/installation.md
+      - Generate Base Project: tutorial/base.md
+      - Generate GraphQL Schema: tutorial/schema.md
+      - Create Scalar Support: tutorial/scalar.md
+      - Add Repository & Data Fetchers and Mutators: tutorial/data.md
+      - Write Tests: tutorial/tests.md
+      - Add Docker Infrastructure: tutorial/docker.md
   - About:
       - Release notes: about/history.md
       - Site Info: about/site.md

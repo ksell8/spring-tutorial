@@ -1,18 +1,44 @@
-# Learn Java Spring
+# Learn Computer Science 
 
 ## Aims
 
-This guide aims to teach basic computer science concepts while learning
-how to build and host a Java Spring-Boot Application.
+This guide aims to teach basic computer science concepts while connecting
+them to modern day computing frameworks and their historical predecessors.
 It aims to teach theoretical computing through practical
 computing disciplines.  Allowing the student to learn not only how
-to build industry standard applications, but why things work the way they do.
+to build industry standard applications, but *why* things work the way they do.
 
-The tutorial that will teach how to build a Java GraphQL API
-connected to a MongoDB database.  We will learn about systems
-such as the Spring Framework, Tomcat, Docker, Maven, Git, Java and JUnit.
-Which will teach us about operating systems, computing languages, security,
-systems of control, and the internet.
+We will learn about computing languages and translation, operating systems, networking, and interfaces.
+We will use these theoretical concepts to dissect real world implementations of these
+ideas including: Java, Spring, GraphQL, Docker, MongoDB and Maven.
+
+These topics will cumulate in a project tutorial which will allow the student
+to implement their knowledge by building a backend API for a web application.
+
+## How is the Guide Formatted?
+
+This guide is broken into 2 main sections: Learn and Tutorial.
+
+It is strongly suggested that the student go through the Learn section in its totality
+before navigating through the tutorial.
+
+However, the Tutorial section will reference the Learn section to justify decisions made and provide opportunities for 
+exploring touched on topics in-depth, should you decide to skip ahead.  Just to reiterate, it is *strongly*
+suggested to not skip the Learn section unless you already have a deep background in computer science
+and are solely interested in learning more about the stack for this project.
+
+
+## What *is* the Tutorial Project?
+
+The tutorial project is a GraphQL API for tracking books in a personal
+library.  If you aren't interested in that project, the book tracking concept can be modified in place to
+track a number of items that may be of more interest: recipes,
+groceries, tasks, shoes, collectables, exercise log, or movies, just to name a few. I
+decided to focus on books, because I have quite a big
+library and a need to track them.  Build what *you* will use!
+
+Future work includes a tutorial which will use Spring-Security
+to secure an API for a Battleship game.  Stay tuned for more!
 
 ## Why Learn Spring?
 
@@ -48,27 +74,3 @@ the images can be configured as code.  This makes it easier to reproduce
 the image and to understand exactly what it includes.
 
 We'll go over both methods of virtualization in depth later.
-
-## How is the Guide Formatted?
-
-This guide is broken into 2 main sections: Learn and Tutorial.
-The tutorial will walk you through the steps to create a Spring based project.
-The learn section will provide an in-depth overview about the tools used.
-
-The tutorial section will reference the learn section to justify decisions
-made and provide opportunities for exploring touched on topics in-depth.
-
-It's suggested that the student walk through the tutorial project
-and reference the learn section as needed.  Even if this is your first time coding the
-tutorial section will give you everything you need to get started.
-
-The tutorial project is a GraphQL API for tracking books in a personal
-library.  If you aren't interested in that project, the book tracking concept can be modified in place to
-track a number of items that may be of more interest: recipes, 
-groceries, tasks, shoes, collectables, exercise log, or movies. I 
-decided to focus on books, because I have quite a big 
-library and a need to track them.  Build what you will use!
-
-Future work includes a tutorial which will use Spring-Security
-to secure an API for a Battleship game.  Stay tuned for more!
-

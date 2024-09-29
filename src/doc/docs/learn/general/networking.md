@@ -27,7 +27,10 @@ the Open Systems Interconnection (OSI) model.
 The network designers wanted to create ways that these protocols could build on each other, so
 they created a design which organized the protocols in layers.  Each protocol belongs to a layer and the layers
 operate in a service model where it can build on the services provided by that layer
-beneath it.
+beneath it.  Users of the internet operate at the application layer, so a sender of data
+sends data down from the application layer and a receiver receives the data at the lowest layer
+until it moves it's way up to the application layer where the receiver can view it.  Let's 
+explore this with an example.
 
 !!! example "Example: Sending a File"
     <ol reversed>
@@ -49,14 +52,63 @@ beneath it.
     6. Presentation Layer: The file is decompressed or decoded.
     7. Application Layer: The email client presents the file to the user.
 
-# Hypertext Transfer Protocol
+# Server and Client vs P2P
+
+!!! info "Terminology"
+
+    In the early days of computers, large central computers, often called mainframes, provided computing resources to multiple users. 
+    These large systems were called **hosts** because they hosted services, programs, or resources that users could access remotely, usually through terminals.
+    The terminals themselves were not centrally connected, only the mainframes were connected in a network.
+    
+    With the invention of the internet (TCP/IP) which connected multiple independent networks together, it became
+    possible for machines to connect to resources without the need for a mainframe.
+
+    Therefore, nowadays *all machines* connected to the internet are called **hosts**.
+
+Protocols at the application layer and the processes that use them are called network
+applications.  There are two dominant architectures for network communications between 
+hosts: server-and-client architecture and P2P architecture.  
+
+In server and client architectures there are two types of hosts in a network: 1) **servers**
+which respond to requests by *serving* data 2) **clients** which make requests for data.
+
+In P2P architectures there are no special hosts which act as servers, each machine in the network can
+be a server or a client at any time.
+
+# The Internet & TCP/IP
+
+The internet was born in 1983 when the major networks of the time switched to TCP/IP
+protocols to connect them into one giant network.  The IP or internet protocol operates
+at layer 3, or the network layer.  It assigns a unique address to each machine on the
+internet called an IP address.  TCP, or the Transmission Control Protocol,
+is a transport layer protocol which dictates the way that information should be
+chunked in order to be transferred across the internet.
+
+# The World Wide Web & Hypertext Transfer Protocol
+
+In 1989 the World Wide Web was invented.  The web is a network application
+which allows for data to be transferred between hosts in a
 
 ## Secure HTTP
 
+# Sockets
+
+
 # What is localhost?
+
+We are building a web application.  A web application is based on the world wide web
+network application, and thus needs to be served on a host.  Luckily, any machine can be a host 
+so we will use *your computer* to test the web application.  
+
+Your own computer is referred to as a local host, where other machines you connect to are
+remote to your computer and called remote hosts.
+
+
+
+
 
 ### References
 
-Much of this was adapted from the first chapter of Computer Networking: A Top
+Much of this was adapted from the first and second chapters of Computer Networking: A Top
 Down Approach by Kurose and Ross. Online Lectures from this book can be found
 [here](https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm).

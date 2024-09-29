@@ -63,8 +63,8 @@ There are lots of different ways to give a software application to a user.  Here
 
 # Web APIs
 
-Web traffic occurs between **clients** and **servers**.  The customer is a client and they access the server
-which serves the application on the client's web browser, mobile application, embedded device, or desktop application.
+Web traffic occurs between **clients** and **servers**.  The customer is a client that requests data from a server
+which serves the application on the client's web browser, mobile application, or desktop application.
 The server provides public APIs to the client, and it has private APIs that only it can call.  The public APIs
 can support authentication methods which only allow certain calls depending on the user.  For example,
 I can delete my own posts on social media, but I can't delete other users' posts.
@@ -79,14 +79,14 @@ I can delete my own posts on social media, but I can't delete other users' posts
 
 Web APIs can trigger many different types of events, but the one's we are primarily concerned with are:
 create, read, update and delete.  These actions are so well used across all applications that there
-is an acronym for them CRUD!
+is an acronym for them, CRUD!
 
 There are many different ways to provide CRUD interfaces to users but we'll be covering the two most popular
 to implement with the Java Spring Framework.
 
 Both of the APIs we will be using have well defined specifications.  It is best to write these specifications first
 as it can help with code and documentation generation and to validate existing implementations of interfaces against new
-schema changes.
+schema changes.  This approach to API development is called *schema first*.
 
 ### REST APIs
 
