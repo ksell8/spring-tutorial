@@ -3,7 +3,7 @@ package com.kurt.teaches.library.scalar;
 public class ISBN {
   private final String formattedValue;
 
-  private ISBN(String formattedValue) {
+  public ISBN(String formattedValue) {
     this.formattedValue = formattedValue;
   }
 

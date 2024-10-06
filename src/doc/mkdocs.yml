@@ -116,6 +116,7 @@ nav:
       - Add Repository & Data Fetchers and Mutators: tutorial/data.md
       - Write Tests: tutorial/tests.md
       - Add Docker Infrastructure: tutorial/docker.md
+      - Logging & Error Handling: tutorial/logging.md
   - About:
       - Release notes: about/history.md
       - Site Info: about/site.md
