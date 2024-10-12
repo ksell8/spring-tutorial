@@ -8,19 +8,68 @@
     <h2>Book Details</h2>
 
     <#if bookDetails??>
-        <p>Title: ${bookDetails.details.title}</p>
-        <p>Publishers: ${bookDetails.details.publishers[0]}</p>
-        <p>Publish Date: ${bookDetails.details.publish_date}</p>
-        <p>Pages: ${bookDetails.details.number_of_pages}</p>
-        <p><img src="${bookDetails.thumbnail_url}" alt="Book cover"/></p>
-        <a href="${bookDetails.preview_url}">Read Preview</a>
+        <form id="addBook" method="post" action="/addBook">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"
+                   value="<#if bookDetails.title??>${bookDetails.title}</#if>">
+            <br><br>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author"
+                value="<#if bookDetails.authors??>${bookDetails.authors[0].name}</#if>">
+            <br><br>
+
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" value="${bookDetails.isbn}">
+            <br><br>
+
+            <label for="publisher">Publisher:</label>
+            <input type="text" id="publisher" name="publisher"
+                   value="<#if bookDetails.publishers??>${bookDetails.publishers[0]}</#if>">
+            <br><br>
+
+            <label for="publishYear">Publish Year:</label>
+            <input type="number" id="publishYear" name="publishYear"
+                   value="<#if bookDetails.publish_year??>${bookDetails.publish_year}</#if>">
+            <br><br>
+
+            <label for="pages">Number of Pages:</label>
+            <input type="number" id="pages" name="pages"
+                   value="<#if bookDetails.number_of_pages??>${bookDetails.number_of_pages}</#if>">
+            <br><br>
+
+            <label for="genre">Genre:</label>
+            <select id="genre" name="genre">
+                <option value="">None</option>
+                <#list genres as genre>
+                    <option value="${genre}">
+                        ${genre?capitalize}
+                    </option>
+                </#list>
+            </select>
+            <br><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="">None</option>
+                <#list statuses as status>
+                    <option value="${status}">
+                        ${status?capitalize}
+                    </option>
+                </#list>
+            </select>
+            <br><br>
+
+            <label for="hardcover">Hardcover:</label>
+            <#-- checkbox only sends data on true, this way in the case of false it will be OK -->
+            <input type="hidden" name="hardcover" value="false">
+            <input type="checkbox" id="hardcover" name="hardcover"> Hardcover
+            <br><br>
+
+            <button type="submit">Add Book</button>
+        </form>
     <#else>
         <p>No book details found for this ISBN.</p>
     </#if>
-
-    <!-- Add a new button to go back to the form -->
-    <form action="/bookform" method="get">
-        <button type="submit">Add a New Book</button>
-    </form>
 </body>
 </html>

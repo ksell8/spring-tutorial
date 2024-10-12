@@ -10,7 +10,7 @@ import java.util.Map;
 public class ExternalBookService {
 
   private final RestClient restClient;
-  private final String API_URL = "https://openlibrary.org/api/books?bibkeys=ISBN:{isbn}&jscmd=details&format=json";
+  public static final String API_URL = "https://openlibrary.org/api/books?bibkeys=ISBN:{isbn}&jscmd=details&format=json";
 
   public ExternalBookService() {
     this.restClient = RestClient.create();

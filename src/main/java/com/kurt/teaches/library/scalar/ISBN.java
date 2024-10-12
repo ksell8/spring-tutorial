@@ -99,4 +99,9 @@ public class ISBN {
     // checksum is equivalent to last digit
     return checksum == Character.getNumericValue(digitsOnly.charAt(12));
   }
+
+  @Override
+  public String toString(){
+    return formattedValue;
+  }
 }

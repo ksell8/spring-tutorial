@@ -21,17 +21,17 @@ public class BookController {
     this.bookService = bookService;
   }
 
-  @DgsQuery(field = DgsConstants.QUERY.BookById)
+  @DgsQuery
   public Book bookById(@InputArgument(DgsConstants.QUERY.BOOKBYID_INPUT_ARGUMENT.Id) String id) {
     return bookService.getBookById(id);
   }
 
-  @DgsQuery(field = DgsConstants.QUERY.BookByName)
+  @DgsQuery
   public Book bookByName(@InputArgument(DgsConstants.QUERY.BOOKBYNAME_INPUT_ARGUMENT.Name) String name) {
     return bookService.getBookByName(name);
   }
 
-  @DgsQuery(field = DgsConstants.QUERY.Books)
+  @DgsQuery
   public PageBook books(
           @InputArgument(DgsConstants.QUERY.BOOKS_INPUT_ARGUMENT.PageNumber) Integer pageNumber,
           @InputArgument(DgsConstants.QUERY.BOOKS_INPUT_ARGUMENT.PageSize) Integer pageSize) {
@@ -48,7 +48,7 @@ public class BookController {
     return pageBook;
   }
 
-  @DgsMutation(field = DgsConstants.MUTATION.AddBook)
+  @DgsMutation
   public Book addBook(@InputArgument(DgsConstants.MUTATION.ADDBOOK_INPUT_ARGUMENT.BookInput) BookInput bookInput) {
     Book book = new Book();
     book.setName(bookInput.getName());
@@ -63,7 +63,7 @@ public class BookController {
     return bookService.addBook(book);
   }
 
-  @DgsMutation(field = DgsConstants.MUTATION.DeleteById)
+  @DgsMutation
   public String deleteById(@InputArgument(DgsConstants.MUTATION.DELETEBYID_INPUT_ARGUMENT.Id) String id) {
     bookService.deleteById(id);
     return id;
