@@ -2,9 +2,19 @@ package com.kurt.teaches.library.scalar;
 
 public class ISBN {
   private final String formattedValue;
+  private final ISBNType type;
 
-  public ISBN(String formattedValue) {
+  public enum ISBNType{ ISBN_13, ISBN_10 }
+
+  private ISBN(String formattedValue) {
+
     this.formattedValue = formattedValue;
+    if(formattedValue.length() == 10){
+      this.type = ISBNType.ISBN_10;
+    }
+    else{
+      this.type = ISBNType.ISBN_13;
+    }
   }
 
   // Factory method to create an ISBN object
@@ -100,8 +110,12 @@ public class ISBN {
     return checksum == Character.getNumericValue(digitsOnly.charAt(12));
   }
 
+  public ISBNType getType(){
+    return type;
+  }
+
   @Override
   public String toString(){
-    return formattedValue;
+    return String.format("%s:%s", type.toString(), formattedValue);
   }
 }

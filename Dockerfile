@@ -24,4 +24,4 @@ COPY --from=build /app/target/library*.jar /app/library.jar
 EXPOSE 8080
 
 # Define the command to run your application
-ENTRYPOINT ["java", "-jar", "/app/library.jar"]
+ENTRYPOINT ["java", "-jar", "/app/library.jar", "--spring.config.additional-location=/config/application-secrets.properties"]

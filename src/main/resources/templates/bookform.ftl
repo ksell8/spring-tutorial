@@ -9,7 +9,7 @@
 
     <#import "/spring.ftl" as spring />
 
-    <form action="/getBookDetails" method="get">
+    <form action="/getBookDetailsGoogle" method="get">
         <@spring.bind "isbn" />
         <label for="isbn">ISBN:</label>
         <input type="text" id="isbn" name="isbn" value="${isbn}" />

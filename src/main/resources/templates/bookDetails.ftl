@@ -16,7 +16,8 @@
 
             <label for="author">Author:</label>
             <input type="text" id="author" name="author"
-                value="<#if bookDetails.authors??>${bookDetails.authors[0].name}</#if>">
+            <#-- TODO: Figure out how to support both types of APIs (most likely in controller) -->
+                value="<#if bookDetails.authors??>${bookDetails.authors[0]}</#if>">
             <br><br>
 
             <label for="isbn">ISBN:</label>
@@ -25,17 +26,17 @@
 
             <label for="publisher">Publisher:</label>
             <input type="text" id="publisher" name="publisher"
-                   value="<#if bookDetails.publishers??>${bookDetails.publishers[0]}</#if>">
+                   value="<#if bookDetails.publishers??>${bookDetails.publishers[0]}<#elseif bookDetails.publisher??>${bookDetails.publisher}</#if>">
             <br><br>
 
-            <label for="publishYear">Publish Year:</label>
-            <input type="number" id="publishYear" name="publishYear"
-                   value="<#if bookDetails.publish_year??>${bookDetails.publish_year}</#if>">
+            <label for="publishedYear">Publish Year:</label>
+            <input type="number" id="publishedYear" name="publishedYear"
+                   value="<#if bookDetails.publishedYear??>${bookDetails.publishedYear}</#if>">
             <br><br>
 
             <label for="pages">Number of Pages:</label>
             <input type="number" id="pages" name="pages"
-                   value="<#if bookDetails.number_of_pages??>${bookDetails.number_of_pages}</#if>">
+                   value="<#if bookDetails.number_of_pages??>${bookDetails.number_of_pages}<#elseif bookDetails.pageCount??>${bookDetails.pageCount}</#if>">
             <br><br>
 
             <label for="genre">Genre:</label>
