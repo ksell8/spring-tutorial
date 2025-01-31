@@ -25,8 +25,9 @@ before navigating through the tutorial.
 However, the Tutorial section will reference the Learn section to justify decisions made and provide opportunities for 
 exploring touched on topics in-depth, should you decide to skip ahead.  Just to reiterate, it is *strongly*
 suggested to not skip the Learn section unless you already have a deep background in computer science
-and are solely interested in learning more about the stack for this project.
-
+and are solely interested in learning more about the stack for this project.  Churning out code is
+becoming less of a relevant skill.  Understanding why pieces of a system are needed and how they integrate
+together will always be critical.
 
 ## What *is* the Tutorial Project?
 
@@ -74,3 +75,11 @@ the images can be configured as code.  This makes it easier to reproduce
 the image and to understand exactly what it includes.
 
 We'll go over both methods of virtualization in depth later.
+
+### Why learn to write tests?
+
+If you are writing code you should be writing tests.  If you don't find bugs
+in the development process, your users will.  We'll learn about the junit testing framework
+as well as helpful testing libraries like testcontainers and toxiproxy.
+
+
